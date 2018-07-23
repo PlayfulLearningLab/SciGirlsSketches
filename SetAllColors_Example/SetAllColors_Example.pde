@@ -12,7 +12,9 @@ void setup()
   size(925, 520);
   
   module  = new Module(this);
-  module.setupModule();
+  
+  int numberOfInputs = 1;
+  module.setupModule(numberOfInputs);
   
   module.setColor0forAllInputs(120, 5, 75);
   module.setColor1forAllInputs(96, 52, 167);

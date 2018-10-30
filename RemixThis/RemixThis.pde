@@ -36,7 +36,7 @@ void setup()
 void draw()
 {
   // Set a background color:
-  background(73, 100, 46);
+  background(0);
 
   // Get the current note for input 0:
   musicalNote  = module.getMusicalNote(0);
@@ -44,10 +44,10 @@ void draw()
   module.setColor(musicalNote, 0);
   // Fill with the current color and draw a rectangle:
   fill(module.getRed(0), module.getGreen(0), module.getBlue(0));
-  ellipse(200, 150, 200, 200);
+  rect(50, 70, 200, 200);
   
   // Draw a legend showing colors and notes:
-  //module.legend(musicalNote, 0);
+  module.legend(musicalNote, 0);
   
   // Repeat above steps for each input:
   musicalNote  = module.getMusicalNote(1);
@@ -55,14 +55,14 @@ void draw()
   fill(module.getRed(1), module.getGreen(1), module.getBlue(1));
   rect(550, 70, 200, 200);
   
-  module.legend(musicalNote, 2);
+  module.legend(musicalNote, 1);
   
   musicalNote  = module.getMusicalNote(2);
   module.setColor(musicalNote, 2);
   fill(module.getRed(2), module.getGreen(2), module.getBlue(2));
   rect(1050, 70, 200, 200);
   
-  module.legend(musicalNote, 3);
+  module.legend(musicalNote, 2);
 
   musicalNote  = module.getMusicalNote(3);
   module.setColor(musicalNote, 3);

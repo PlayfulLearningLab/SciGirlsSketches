@@ -104,14 +104,14 @@ public class Module
 		else
 		{
 			this.input = new RecordedInput(this.parent, new String[] { 	
-					"Lead_01.wav",
-					"Beatbox_01.wav",
-					"ALto b_01.wav",
-					"Alto_01.wav",
-					"Sop1_01.wav",
-					"Sop1b_01.wav",
-					"Sop2_01.wav",
-					"Sop2b_01.wav" });
+					"Lead1_01.wav",
+					"Beatbox1_01.wav",
+					"ALto1b_01.wav",
+					"Alto1a_01.wav",
+					"Soprano1a_01.wav",
+					"Soprano1B_01.wav",
+					"Soprano2a_01.wav",
+					"Soprano2b_01.wav" });
 		}
 
 		this.totalNumInputs  = this.input.getAdjustedNumInputs();
@@ -1315,7 +1315,23 @@ public class Module
 		
 
 	}
-
+	public PShape getLightning()
+	{
+	  PShape storm;
+	  storm=this.parent.createShape();
+	  storm.beginShape();
+	  
+	  storm.vertex(50,0);
+	  storm.vertex(10,40);
+	  storm.vertex(25,50);
+	  storm.vertex(0,90);
+	  storm.vertex(40,50);
+	  storm.vertex(25,40);
+	  storm.vertex(50,0);
+	  
+	  storm.scale(2);
+	  return storm;
+	}
 
 
 
